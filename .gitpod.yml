@@ -1,0 +1,7 @@
+tasks:
+  - init: pnpm i
+
+
+vscode:
+  extensions:
+    - astro-build.astro-vscode
