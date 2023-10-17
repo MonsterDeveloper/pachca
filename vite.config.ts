@@ -17,6 +17,7 @@ export default defineConfig({
     tsconfigPaths(),
     dts({
       entryRoot: "src",
+      exclude: ["**/*.test-d.ts", "**/*.test.ts"],
     }),
   ],
   test: {
