@@ -8,11 +8,11 @@ export class PachcaError extends Error {
 }
 
 export interface ClientError {
-  key?: string;
-  value?: string;
-  code?: string;
-  payload?: Record<string, unknown>;
-  message?: string;
+  key?: string | null;
+  value?: string | null;
+  code?: string | null;
+  payload?: Record<string, unknown> | null;
+  message?: string | null;
 }
 
 export class PachcaClientError extends PachcaError {
