@@ -47,7 +47,15 @@ npm i pachca
 
 ### Пример использования
 ```typescript
-// TODO добавить пример
+import { CustomPropertyEntityType, Pachca } from "pachca";
+
+const pachca = new Pachca({
+  accessToken: process.env.PACHCA_ACCESS_TOKEN!, // Токен доступа
+});
+
+const { data } = await pachca.customProperties.get({ entity_type: CustomPropertyEntityType.User }); // Получаем все дополнительные поля для пользователей
+
+data.at(0).name; // Результат типизирован
 ```
 
 ## Документация
