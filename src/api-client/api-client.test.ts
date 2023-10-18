@@ -151,4 +151,20 @@ describe("ApiClient", () => {
       );
     });
   });
+
+  describe("put", () => {
+    it("should send a PUT request", async () => {
+      const fetchSpy = vi.spyOn(globalThis, "fetch");
+      const client = new ApiClient({ accessToken: "" });
+
+      await client.put("/");
+
+      expect(fetchSpy).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          method: "PUT",
+        }),
+      );
+    });
+  });
 });

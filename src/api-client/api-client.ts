@@ -105,4 +105,9 @@ export class ApiClient {
   async post(url: string, options: RequestOptionsWithoutMethod = {}) {
     return this.request(url, { ...options, method: "POST" });
   }
+
+  /** Выполняет PUT запрос */
+  async put(url: string, options: RequestOptionsWithoutMethod = {}) {
+    return this.request(url, { ...options, method: "PUT" });
+  }
 }
