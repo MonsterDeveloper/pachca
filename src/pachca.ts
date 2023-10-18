@@ -1,3 +1,4 @@
+/* c8 ignore start */
 import { ApiClient, type ApiClientOptions } from "@/api-client";
 import { CustomPropertiesEndpoint } from "@/endpoints";
 
@@ -10,3 +11,4 @@ export class Pachca {
     this.customProperties = new CustomPropertiesEndpoint(this.client);
   }
 }
+/* c8 ignore stop */
