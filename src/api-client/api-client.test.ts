@@ -103,8 +103,8 @@ describe("ApiClient", () => {
         expect.objectContaining({
           method: "POST",
           body: formData,
-          headers: expect.objectContaining({
-            "Content-Type": "multipart/form-data",
+          headers: expect.not.objectContaining({
+            Authorization: "Bearer test",
           }),
         }),
       );

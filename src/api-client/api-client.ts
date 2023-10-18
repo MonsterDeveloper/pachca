@@ -62,6 +62,15 @@ export class ApiClient {
       ? endpoint
       : this.baseUrl + endpoint;
 
+    const headers: Record<string, string> = {
+      "User-Agent": this.userAgent,
+    };
+
+    if (!(options?.body instanceof FormData)) {
+      headers["Content-Type"] = "application/json; charset=utf-8";
+      headers["Authorization"] = `Bearer ${this.accessToken}`;
+    }
+
     const response = await fetch(
       url + (searchParameters ? `?${searchParameters}` : ""),
       {
@@ -73,12 +82,7 @@ export class ApiClient {
             ? JSON.stringify(options.body)
             : undefined,
         headers: {
-          Authorization: `Bearer ${this.accessToken}`,
-          "User-Agent": this.userAgent,
-          "Content-Type":
-            options?.body instanceof FormData
-              ? "multipart/form-data"
-              : "application/json; charset=utf-8",
+          ...headers,
           ...options.headers,
         },
       },
