@@ -70,7 +70,7 @@ data.at(0).name; // Результат типизирован
 ## Функционал
 - ✅ [Дополнительные поля](https://crm.pachca.com/dev/common/fields/)
 - ✅ [Загрузка файлов](https://crm.pachca.com/dev/common/files/)
-- ⭕ [Сотрудники](https://crm.pachca.com/dev/users/new/)
+- ✅ [Сотрудники](https://crm.pachca.com/dev/users/new/)
 - ⭕ [Теги сотрудников](https://crm.pachca.com/dev/group_tags/list/)
 - ⭕ [Беседы и каналы](https://crm.pachca.com/dev/chats/new/)
 - ⭕ [Участники бесед и каналов](https://crm.pachca.com/dev/members/users/new/)

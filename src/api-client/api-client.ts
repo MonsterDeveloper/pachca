@@ -110,4 +110,8 @@ export class ApiClient {
   async put(url: string, options: RequestOptionsWithoutMethod = {}) {
     return this.request(url, { ...options, method: "PUT" });
   }
+
+  async delete(url: string, options: RequestOptionsWithoutMethod = {}) {
+    return this.request(url, { ...options, method: "DELETE" });
+  }
 }

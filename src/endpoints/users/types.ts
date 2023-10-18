@@ -48,7 +48,7 @@ export interface User {
 }
 
 export interface PostUsersRequest {
-  /** Данные пользователя */
+  /** Данные сотрудника */
   user: Simplify<
     Omit<User, "id" | "bot" | "custom_properties" | "invite_status"> & {
       custom_properties?: (Pick<CustomProperty, "id"> & { value: string })[];
@@ -56,6 +56,19 @@ export interface PostUsersRequest {
   >;
   /** Пропуск этапа отправки приглашения сотруднику (при значении true сотруднику не будет отправлено письмо на электронную почту с приглашением создать аккаунт). Данный параметр полезен в случае предварительного создания аккаунтов сотрудникам перед их входом через SSO. */
   skip_email_notify?: boolean;
+}
+
+export interface PutUserRequest {
+  /** Данные сотрудника */
+  user: Simplify<
+    Partial<
+      Omit<User, "id" | "bot" | "custom_properties" | "invite_status"> & {
+        custom_properties?: (Pick<CustomProperty, "id"> & {
+          value: string;
+        })[];
+      }
+    >
+  >;
 }
 
 export interface GetUsersRequest {
@@ -71,6 +84,7 @@ export interface GetUsersRequest {
    * @default 1
    */
   page?: number;
-  /**Поисковая фраза для фильтрации результатов (поиск идет по полям first_name (имя), last_name (фамилия), email (электронная почта), phone_number (телефон) и nickname (никнейм)) */
+
+  /** Поисковая фраза для фильтрации результатов (поиск идет по полям first_name (имя), last_name (фамилия), email (электронная почта), phone_number (телефон) и nickname (никнейм)) */
   query?: string;
 }

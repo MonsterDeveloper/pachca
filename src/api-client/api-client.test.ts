@@ -167,4 +167,20 @@ describe("ApiClient", () => {
       );
     });
   });
+
+  describe("delete", () => {
+    it("should send a DELETE request", async () => {
+      const fetchSpy = vi.spyOn(globalThis, "fetch");
+      const client = new ApiClient({ accessToken: "" });
+
+      await client.delete("/");
+
+      expect(fetchSpy).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          method: "DELETE",
+        }),
+      );
+    });
+  });
 });

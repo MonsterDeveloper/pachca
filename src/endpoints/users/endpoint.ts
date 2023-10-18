@@ -3,6 +3,7 @@ import { BaseEndpoint } from "../base-endpoint";
 import {
   type GetUsersRequest,
   type PostUsersRequest,
+  type PutUserRequest,
   type User,
 } from "./types";
 
@@ -37,5 +38,41 @@ export class UsersEndpoint extends BaseEndpoint {
     const response = await this.client.get(ENDPOINT_URL, { searchParameters });
 
     return response.json();
+  }
+
+  /**
+   * Получить информацию о сотруднике
+   *
+   * @see https://crm.pachca.com/dev/users/get/
+   */
+  async getById(id: number): Promise<ApiResponse<User>> {
+    const response = await this.client.get(`${ENDPOINT_URL}/${id}`);
+
+    return response.json();
+  }
+
+  /**
+   * Редактировать сотрудника
+   *
+   * @see https://crm.pachca.com/dev/users/update/
+   */
+  async put(
+    id: number,
+    data: Simplify<PutUserRequest>,
+  ): Promise<ApiResponse<User>> {
+    const response = await this.client.put(`${ENDPOINT_URL}/${id}`, {
+      body: data,
+    });
+
+    return response.json();
+  }
+
+  /**
+   * Удалить сотрудника
+   *
+   * @see https://crm.pachca.com/dev/users/delete/
+   */
+  async delete(id: number) {
+    await this.client.delete(`${ENDPOINT_URL}/${id}`);
   }
 }

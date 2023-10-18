@@ -70,4 +70,33 @@ describe("UsersEndpoint", () => {
       expectTypeOf(sampleUser).toMatchTypeOf(data[0]);
     });
   });
+
+  describe("getById", () => {
+    it("should accept an id and return a user", async () => {
+      expectTypeOf(endpoint.getById).toBeCallableWith(12);
+
+      const { data } = await endpoint.getById(12);
+
+      expectTypeOf(sampleUser).toMatchTypeOf(data);
+    });
+  });
+
+  describe("put", () => {
+    it("should accept an id and a request body and return a user", async () => {
+      const putData = {
+        user: {
+          first_name: "Олег",
+          last_name: "Петров",
+          email: "test@example.com",
+          department: "Продукт",
+        },
+      };
+
+      expectTypeOf(endpoint.put).toBeCallableWith(12, putData);
+
+      const { data } = await endpoint.put(12, putData);
+
+      expectTypeOf(sampleUser).toMatchTypeOf(data);
+    });
+  });
 });
