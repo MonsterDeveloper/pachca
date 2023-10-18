@@ -5,6 +5,11 @@ import type { CustomProperty, GetCustomPropertiesRequest } from "./types";
 const ENDPOINT_URL = "/custom_properties";
 
 export class CustomPropertiesEndpoint extends BaseEndpoint {
+  /**
+   * Получить список дополнительных полей
+   *
+   * @see https://crm.pachca.com/dev/common/fields/
+   */
   async get(
     options: GetCustomPropertiesRequest,
   ): Promise<ApiResponse<CustomProperty[]>> {
