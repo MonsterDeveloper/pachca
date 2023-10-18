@@ -4,7 +4,8 @@ import type { UploadsData } from "./types";
 const ENDPOINT_URL = "/uploads";
 
 export class UploadsEndpoint extends BaseEndpoint {
-  /** Получить данные для загрузки файла
+  /**
+   * Получить данные для загрузки файла
    *
    * @see https://crm.pachca.com/dev/common/fields/
    */
@@ -14,7 +15,8 @@ export class UploadsEndpoint extends BaseEndpoint {
     return response.json();
   }
 
-  /** Загрузить файл
+  /**
+   * Загрузить файл
    *
    * @param file Файл для загрузки
    * @param uploadsData Данные для загрузки (из метода `post`)

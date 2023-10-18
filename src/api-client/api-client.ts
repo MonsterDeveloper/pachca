@@ -5,17 +5,20 @@ import { handleError } from "./handle-error";
  * Опции создания API клиента
  */
 export interface ApiClientOptions {
-  /** Базовый URL API
+  /**
+   * Базовый URL API
    * @default https://api.pachca.com/api/shared/v1
    */
   baseUrl?: string;
 
-  /** Токен доступа
+  /**
+   * Токен доступа
    * @see https://crm.pachca.com/dev/getting-started/requests-and-responses/
    */
   accessToken: string;
 
-  /** Заголовок User-Agent в запросах
+  /**
+   * Заголовок User-Agent в запросах
    * @default pachca/${version} (+https://github.com/MonsterDeveloper/pachca)
    */
   userAgent?: string;
