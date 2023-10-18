@@ -9,8 +9,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: fileURLToPath(new URL("src/index.ts", import.meta.url)),
-      name: "pachca",
-      fileName: "pachca",
+      formats: ["es"],
     },
   },
   plugins: [

@@ -6,8 +6,7 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/pachca.umd.cjs",
-  "module": "./dist/pachca.js",
+  "main": "./dist/pachca.js",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
