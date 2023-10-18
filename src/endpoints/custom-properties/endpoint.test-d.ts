@@ -1,7 +1,7 @@
 import { describe, expectTypeOf, it } from "vitest";
 import { CustomPropertiesEndpoint } from "./endpoint";
 import { ApiClient } from "@/api-client";
-import { CustomPropertyEntityType } from ".";
+import { CustomPropertyEntityType } from "./types";
 
 const endpoint = new CustomPropertiesEndpoint(
   new ApiClient({ accessToken: "" }),

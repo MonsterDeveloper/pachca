@@ -1,5 +1,3 @@
-import type { ApiResponse } from "@/types";
-
 export enum CustomPropertyEntityType {
   User = "User",
 }
@@ -20,6 +18,3 @@ export interface CustomProperty {
 export interface GetCustomPropertiesRequest {
   entity_type: CustomPropertyEntityType;
 }
-
-export interface GetCustomPropertiesResponse
-  extends ApiResponse<CustomProperty[]> {}
