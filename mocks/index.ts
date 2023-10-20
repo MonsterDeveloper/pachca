@@ -1,3 +1,4 @@
+import chats from "./chats";
 import customProperties from "./custom-properties";
 import example from "./example";
 import groupTags from "./group-tags";
@@ -12,4 +13,5 @@ export default [
   ...uploads,
   ...users,
   ...groupTags,
+  ...chats,
 ];

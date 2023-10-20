@@ -5,6 +5,7 @@ import {
   GroupTagsEndpoint,
   UploadsEndpoint,
   UsersEndpoint,
+  ChatsEndpoint,
 } from "@/endpoints";
 
 export class Pachca {
@@ -13,6 +14,7 @@ export class Pachca {
   public uploads: UploadsEndpoint;
   public users: UsersEndpoint;
   public groupTags: GroupTagsEndpoint;
+  public chats: ChatsEndpoint;
 
   constructor(options: ApiClientOptions) {
     this.client = new ApiClient(options);
@@ -20,6 +22,7 @@ export class Pachca {
     this.uploads = new UploadsEndpoint(this.client);
     this.users = new UsersEndpoint(this.client);
     this.groupTags = new GroupTagsEndpoint(this.client);
+    this.chats = new ChatsEndpoint(this.client);
   }
 }
 /* c8 ignore stop */
