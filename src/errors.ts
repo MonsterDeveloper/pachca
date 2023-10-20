@@ -1,3 +1,4 @@
+/** Общая ошибка Пачки */
 export class PachcaError extends Error {
   public response?: Response;
 
@@ -7,6 +8,11 @@ export class PachcaError extends Error {
   }
 }
 
+/**
+ * Клиентская ошибка Пачки (код 4xx).
+ *
+ * @see https://crm.pachca.com/dev/getting-started/errors/
+ */
 export interface ClientError {
   key?: string | null;
   value?: string | null;
