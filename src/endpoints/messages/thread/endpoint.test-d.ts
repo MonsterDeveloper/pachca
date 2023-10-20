@@ -1,7 +1,7 @@
 import { describe, it, expectTypeOf } from "vitest";
-import { ThreadEndpoint } from ".";
+import { MessagesThreadEndpoint } from "./endpoint";
 
-const endpoint = new ThreadEndpoint({} as never);
+const endpoint = new MessagesThreadEndpoint({} as never);
 
 const sampleThread = {
   id: 265_142,
@@ -15,12 +15,12 @@ describe("ThreadEndpoint", () => {
   describe("post", () => {
     it("should accept valid data", () => {
       expectTypeOf(endpoint.post).toBeCallableWith(1);
+    });
 
-      it("should return created thread", async () => {
-        const { data } = await endpoint.post({} as never);
+    it("should return created thread", async () => {
+      const { data } = await endpoint.post({} as never);
 
-        expectTypeOf(sampleThread).toMatchTypeOf(data);
-      });
+      expectTypeOf(sampleThread).toMatchTypeOf(data);
     });
   });
 });

@@ -1,2 +1,2 @@
-export { ThreadEndpoint } from "./endpoint";
+export { MessagesThreadEndpoint } from "./endpoint";
 export * from "./types";

@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { ThreadEndpoint } from ".";
+import { MessagesThreadEndpoint } from "./endpoint";
 import { ApiClient } from "@/api-client";
 
-const endpoint = new ThreadEndpoint(new ApiClient({ accessToken: "" }));
+const endpoint = new MessagesThreadEndpoint(new ApiClient({ accessToken: "" }));
 
 describe("ThreadEndpoint", () => {
   describe("post", () => {

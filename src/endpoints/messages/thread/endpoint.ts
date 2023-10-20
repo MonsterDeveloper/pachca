@@ -5,7 +5,7 @@ import { ENDPOINT_URL as MESSAGES_ENDPOINT_URL } from "../endpoint";
 
 const ENDPOINT_URL = "/thread";
 
-export class ThreadEndpoint extends BaseEndpoint {
+export class MessagesThreadEndpoint extends BaseEndpoint {
   /**
    * Создать новое обсуждение
    *

@@ -100,4 +100,20 @@ export default [
       );
     },
   ),
+  rest.post(
+    PACHCA_BASE_URL + ENDPOINT_URL + "/:id/members",
+    (_, response, context) => response(context.status(201)),
+  ),
+  rest.delete(
+    PACHCA_BASE_URL + ENDPOINT_URL + "/:id/members/:memberId",
+    (_, response, context) => response(context.status(204)),
+  ),
+  rest.post(
+    PACHCA_BASE_URL + ENDPOINT_URL + "/:id/group_tags",
+    (_, response, context) => response(context.status(201)),
+  ),
+  rest.delete(
+    PACHCA_BASE_URL + ENDPOINT_URL + "/:id/group_tags/:groupTagId",
+    (_, response, context) => response(context.status(204)),
+  ),
 ];

@@ -6,10 +6,22 @@ import type {
   PostChatsRequest,
   PutChatsRequest,
 } from "./types";
+import { ChatsMembersEndpoint } from "./members";
+import { ChatsGroupTagsEndpoint } from "./group-tags";
+import type { ApiClient } from "@/api-client";
 
-const ENDPOINT_URL = "/chats";
+export const ENDPOINT_URL = "/chats";
 
 export class ChatsEndpoint extends BaseEndpoint {
+  public members: ChatsMembersEndpoint;
+  public groupTags: ChatsGroupTagsEndpoint;
+
+  constructor(client: ApiClient) {
+    super(client);
+    this.members = new ChatsMembersEndpoint(client);
+    this.groupTags = new ChatsGroupTagsEndpoint(client);
+  }
+
   /**
    * Создать новую беседу или канал
    *

@@ -1,14 +1,14 @@
 import type { ApiClient } from "@/api-client";
 import { BaseEndpoint } from "../base-endpoint";
-import { ThreadEndpoint } from "./thread";
+import { MessagesThreadEndpoint } from "./thread";
 
 export const ENDPOINT_URL = "/messages";
 
 export class MessagesEndpoint extends BaseEndpoint {
-  public thread: ThreadEndpoint;
+  public thread: MessagesThreadEndpoint;
 
   constructor(client: ApiClient) {
     super(client);
-    this.thread = new ThreadEndpoint(client);
+    this.thread = new MessagesThreadEndpoint(client);
   }
 }
