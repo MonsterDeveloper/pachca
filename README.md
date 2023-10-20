@@ -169,7 +169,7 @@ await pachca.uploads.postFile(file, uploadsData);
 - ✅ [Сотрудники](https://crm.pachca.com/dev/users/new/)
 - ✅ [Теги сотрудников](https://crm.pachca.com/dev/group_tags/list/)
 - ✅ [Беседы и каналы](https://crm.pachca.com/dev/chats/new/)
-- ⭕ [Участники бесед и каналов](https://crm.pachca.com/dev/members/users/new/)
+- ✅ [Участники бесед и каналов](https://crm.pachca.com/dev/members/users/new/)
 - ✅ [Комментарии](https://crm.pachca.com/dev/threads/new/)
 - ⭕ [Сообщения](https://crm.pachca.com/dev/messages/new/)
 - ⭕ [Реакции на сообщения](https://crm.pachca.com/dev/reactions/new/)
