@@ -8,11 +8,6 @@ export class PachcaError extends Error {
   }
 }
 
-/**
- * Клиентская ошибка Пачки (код 4xx).
- *
- * @see https://crm.pachca.com/dev/getting-started/errors/
- */
 export interface ClientError {
   key?: string | null;
   value?: string | null;
@@ -21,6 +16,11 @@ export interface ClientError {
   message?: string | null;
 }
 
+/**
+ * Клиентская ошибка Пачки (код 4xx).
+ *
+ * @see https://crm.pachca.com/dev/getting-started/errors/
+ */
 export class PachcaClientError extends PachcaError {
   public errors: ClientError[];
 
