@@ -171,6 +171,6 @@ await pachca.uploads.postFile(file, uploadsData);
 - ✅ [Беседы и каналы](https://crm.pachca.com/dev/chats/new/)
 - ✅ [Участники бесед и каналов](https://crm.pachca.com/dev/members/users/new/)
 - ✅ [Комментарии](https://crm.pachca.com/dev/threads/new/)
-- ⭕ [Сообщения](https://crm.pachca.com/dev/messages/new/)
+- ✅ [Сообщения](https://crm.pachca.com/dev/messages/new/)
 - ⭕ [Реакции на сообщения](https://crm.pachca.com/dev/reactions/new/)
 - ⭕ [Задачи](https://crm.pachca.com/dev/tasks/new/)
