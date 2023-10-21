@@ -9,3 +9,11 @@ export interface UploadsData {
   key: string;
   direct_url: string;
 }
+
+/** Тип файла */
+export enum FileType {
+  /** файл */
+  File = "file",
+  /** изображение */
+  Image = "image",
+}
