@@ -172,5 +172,5 @@ await pachca.uploads.postFile(file, uploadsData);
 - ✅ [Участники бесед и каналов](https://crm.pachca.com/dev/members/users/new/)
 - ✅ [Комментарии](https://crm.pachca.com/dev/threads/new/)
 - ✅ [Сообщения](https://crm.pachca.com/dev/messages/new/)
-- ⭕ [Реакции на сообщения](https://crm.pachca.com/dev/reactions/new/)
+- ✅ [Реакции на сообщения](https://crm.pachca.com/dev/reactions/new/)
 - ⭕ [Задачи](https://crm.pachca.com/dev/tasks/new/)

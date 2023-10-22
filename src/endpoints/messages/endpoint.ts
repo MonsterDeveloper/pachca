@@ -8,15 +8,18 @@ import type {
   PutMessagesRequest,
 } from "./types";
 import type { ApiResponse } from "@/types";
+import { MessagesReactionsEndpoint } from "./reactions";
 
 export const ENDPOINT_URL = "/messages";
 
 export class MessagesEndpoint extends BaseEndpoint {
   public thread: MessagesThreadEndpoint;
+  public reactions: MessagesReactionsEndpoint;
 
   constructor(client: ApiClient) {
     super(client);
     this.thread = new MessagesThreadEndpoint(client);
+    this.reactions = new MessagesReactionsEndpoint(client);
   }
 
   /**

@@ -154,4 +154,58 @@ export default [
       );
     },
   ),
+  rest.post(
+    `${PACHCA_BASE_URL}${ENDPOINT_URL}/:id/reactions`,
+    (_, response, context) => response(context.status(201)),
+  ),
+  rest.delete(
+    `${PACHCA_BASE_URL}${ENDPOINT_URL}/:id/reactions`,
+    (_, response, context) => response(context.status(204)),
+  ),
+  rest.get(
+    `${PACHCA_BASE_URL}${ENDPOINT_URL}/:id/reactions`,
+    (_, response, context) =>
+      response(
+        context.status(200),
+        context.json({
+          data: [
+            {
+              user_id: 76_243,
+              created_at: "2023-09-11T14:59:35.000Z",
+              code: "👍",
+            },
+            {
+              user_id: 10_764,
+              created_at: "2023-09-11T15:00:31.000Z",
+              code: "👍",
+            },
+            {
+              user_id: 27_494,
+              created_at: "2023-09-11T15:01:27.000Z",
+              code: "👍",
+            },
+            {
+              user_id: 27_494,
+              created_at: "2023-09-11T15:01:47.000Z",
+              code: "🔥",
+            },
+            {
+              user_id: 11_887,
+              created_at: "2023-09-11T15:12:49.000Z",
+              code: "👍",
+            },
+            {
+              user_id: 11_887,
+              created_at: "2023-09-11T15:13:46.000Z",
+              code: "⭐",
+            },
+            {
+              user_id: 11_887,
+              created_at: "2023-09-11T15:13:47.000Z",
+              code: "🔥",
+            },
+          ],
+        }),
+      ),
+  ),
 ];
