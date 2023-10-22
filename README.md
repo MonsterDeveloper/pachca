@@ -1,7 +1,7 @@
 # pachca
 [![npm](https://img.shields.io/npm/v/pachca)](https://npmjs.com/package/pachca)
 [![Размер минимизированного пакета с gzip](https://img.shields.io/bundlejs/size/pachca)](https://bundlejs.com/?q=pachca)
-![Статус сборки](https://img.shields.io/github/actions/workflow/status/MonsterDeveloper/pachca/publish-to-npm.yml)
+![Статус сборки](https://img.shields.io/github/actions/workflow/status/MonsterDeveloper/pachca/release.yml)
 ![Лицензия](https://img.shields.io/github/license/MonsterDeveloper/pachca)
 
 <a href="https://gitpod.io/#https://github.com/MonsterDeveloper/pachca" rel="nofollow noopener noreferrer" target="_blank" class="after:hidden"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Открыть в Gitpod"></a>
