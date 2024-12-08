@@ -17,6 +17,7 @@ export default defineConfig({
     dts({
       entryRoot: "src",
       exclude: ["**/*.test-d.ts", "**/*.test.ts", "mocks"],
+      rollupTypes: true,
     }),
   ],
   test: {
