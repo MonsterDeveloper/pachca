@@ -1,6 +1,6 @@
 {
   "name": "pachca",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Клиент для работы с API Пачки с поддержкой TypeScript",
   "type": "module",
   "files": [
