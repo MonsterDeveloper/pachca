@@ -6,6 +6,7 @@
   "files": [
     "dist"
   ],
+  "private": false,
   "main": "./dist/pachca.js",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
@@ -31,6 +32,9 @@
   "license": "GPL-3.0-only",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
